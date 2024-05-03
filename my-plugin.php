@@ -84,5 +84,12 @@ function my_setting(){
 }
 
 
+
+//fetch the menu page (Custom Page) option data
+function fetch_data_func(){
+    $custom =get_option('custom_data');      //retrieve the stored option data
+    return '<h3>'. esc_html($custom).'</h3>'; //display custom data as a title
+}
+add_shortcode('fetch_data','fetch_data_func');
 ?>
  
